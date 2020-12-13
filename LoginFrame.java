@@ -76,6 +76,6 @@ public class LoginFrame extends JFrame{
     }
     public void setPW(String passwd){
         tpw.setText(passwd);
-        System.out.println("in LoginFrame pw =>"+tpw.getText());
+        System.out.println("In LoginFrame PW =>" + tpw.getText());
     }
 }

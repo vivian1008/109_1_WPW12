@@ -19,12 +19,15 @@ public class EncryptFrame extends JFrame{
     private JMenuItem jmi = new JMenuItem("Open");
     private JPanel jpnCtr = new JPanel(new GridLayout(2,5,1,1));
     private JPanel jpnC = new JPanel(new GridLayout(1,2,1,1));
+    private JPanel jpnS = new JPanel(new GridLayout(1,3,1,1)); 
     private JLabel jlbA = new JLabel("Encrypt Algotithm");
-    private JLabel jlbP = new JLabel("");
+    private JLabel jlbP = new JLabel("Password");
     private JLabel jlb = new JLabel("Encrypt/Decrypt");
+    private JLabel jlbF = new JLabel("File Name");
     private JButton go = new JButton("GO!");
     private JButton re = new JButton("Resset");
     private JButton ext = new JButton("Exit");
+    private JButton sav = new JButton("Save");
     private JRadioButton jrbE = new JRadioButton("Encrypt");
     private JRadioButton jrbD = new JRadioButton("Decrypt");
     private ButtonGroup bg = new ButtonGroup();
@@ -59,6 +62,9 @@ public class EncryptFrame extends JFrame{
         jpnCtr.add(ext);
         jpnC.add(jspC);
         jpnC.add(jspP);
+        jpnS.add(jlbF, BorderLayout.WEST);
+        jpnS.add(jtf2, BorderLayout.CENTER);
+        jpnS.add(sav, BorderLayout.EAST);
         jcb.addItem(new String("XOR"));
         jcb.addItem(new String("Caeser"));
 
@@ -109,4 +115,3 @@ public class EncryptFrame extends JFrame{
     });
     }
     }
-
